@@ -1,9 +1,9 @@
 @extends("layouts.app")
-@section("content")
+
 @section('content')
 <section class="comics">
     <div class="container">
-        <div class="title-main">CURRENT SERIES</div>
+        <h1 class="title-main">Lista Fumetti</h1>
         <div class="row row-cols-6  g-4 py-5">
             @foreach ($comics as $comic)
             <div class="col" >
@@ -29,4 +29,3 @@
   
 @endsection
     
-@endsection
