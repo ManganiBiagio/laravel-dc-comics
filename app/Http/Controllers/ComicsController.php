@@ -69,9 +69,9 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
+    public function edit($id) {
+        $comic=Comic::findOrFail($id);
+        return view("comics.edit",compact("comic"));
     }
 
     /**
@@ -83,7 +83,20 @@ class ComicsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data=$request->all();
+
+        $comic=Comic::findOrFail($id);;
+            $comic->title=$data["title"];
+            $comic->description=$data["description"];
+            $comic->thumb="placeholder";
+            $comic->price=(float) $data["price"];
+            $comic->series=$data["series"];
+            $comic->sale_date="2019-04-10";
+            $comic->type=$data["type"];
+
+            $comic->save();
+
+            return redirect()->route("comics.show",$comic->id);
     }
 
     /**
