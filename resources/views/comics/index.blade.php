@@ -15,7 +15,7 @@
                         <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-link">
                             modifica 
                         </a>
-                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" >
+                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="delete-comic" >
                             @csrf()
                             @method('delete')
               
@@ -36,6 +36,24 @@
     </div>
 
 </section>
+
+<script>
+    
+    const forms = document.querySelectorAll(".delete-comic");
+    forms.forEach((form) => {
+      
+      form.addEventListener("submit", function(event) {
+        
+        event.preventDefault();
+        
+        const conferma = confirm("Sei sicuro di voler cancellare il fumetto?");
+        // Se conferma, inviamo il form
+        if (conferma === true) {
+          form.submit();
+        }
+      })
+    })
+  </script>
   
   
 @endsection
