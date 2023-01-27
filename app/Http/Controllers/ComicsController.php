@@ -88,10 +88,8 @@ class ComicsController extends Controller
         $comic=Comic::findOrFail($id);
             $comic->title=$data["title"];
             $comic->description=$data["description"];
-            $comic->thumb="placeholder";
             $comic->price=(float) $data["price"];
             $comic->series=$data["series"];
-            $comic->sale_date="2019-04-10";
             $comic->type=$data["type"];
 
             $comic->save();
