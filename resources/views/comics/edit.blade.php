@@ -18,7 +18,7 @@
       </div>
       <div class="mb-3">
         <label class="form-label">Prezzo</label>
-        <input type="number" class="form-control" name="price" value="{{ $comic->price }}">
+        <input type="number" step=".01" class="form-control" name="price" value="{{ $comic->price }}">
       </div>
       <div class="mb-3">
         <label class="form-label">Serie</label>
