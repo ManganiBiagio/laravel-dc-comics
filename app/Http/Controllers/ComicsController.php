@@ -94,7 +94,7 @@ class ComicsController extends Controller
 
             $comic->save();
 
-            return redirect()->route("comics.show",$comic->id);
+            return redirect()->route("comics.show",$comic->id)->with("status","Fumetto modificato con successo");
     }
 
     /**

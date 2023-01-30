@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+  
     <h1>ModificaFumetto</h1>
 
     <form action="{{ route('comics.update',$comic->id) }}" method="POST">
