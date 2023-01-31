@@ -38,7 +38,7 @@ class StoreComicRequest extends FormRequest
             "description.required" => "Il contenuto del post è obbligatorio",
             "price.required"=>"il prezzo è obbligatorio",
             "price.numeric"=>"il prezzo deve essere un numero",
-            "series.required"=>"la serie di apparteenza è un campo obbligatorio",
+            "series.required"=>"la serie di appartenenza è un campo obbligatorio",
             "type.required"=>"il tipo di fumetto è un campo obbligatorio"
         ];
     }
