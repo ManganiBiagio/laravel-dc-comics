@@ -37,7 +37,7 @@
       <div class="mb-3">
         <label class="form-label">Serie</label>
         <input type="text" class="form-control @error('series') is-invalid @elseif(old('series')) is-valid @enderror" name="series" value="{{old("series")}}">
-        @error('series')
+         @error('series')
         <div class="invalid-feedback">
           {{ $message }}
         </div>
